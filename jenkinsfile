@@ -1,0 +1,25 @@
+@Library('my-shared-lib')
+
+pipeline {
+
+    agent any 
+
+    stages {
+
+        stage('Build and Test') {
+
+            steps {
+
+                buildDockerImage('neeraj91/flash-app','env.BUID_NUMBER')
+            }
+        }
+
+        stage('Deploy') {
+
+            steps {
+
+                sh 'echo Deploy'
+            }
+        }
+    }
+}
