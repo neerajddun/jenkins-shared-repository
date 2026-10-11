@@ -10,7 +10,7 @@ pipeline {
 
             steps {
 
-                buildDockerImage('neeraj91/flash-app',env.BUID_NUMBER)
+                buildDockerImage('neeraj91/flash-app',env.BUILD_NUMBER)
             }
         }
 
